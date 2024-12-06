@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(rgb(51, 0, 58), rgb(11, 0, 15));
+    height: 100vh;
+    font-family: system-ui;
+    transition: background 0.3s,color 0.3s;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+header{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    margin: 30px;
+    position: absolute;
+    width: 98%;
+    z-index: 100;
+}
+header .logo{
+    text-transform: uppercase;
+
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+}
+header ul li{
+    margin-right: 30px;
+}
+header ul li a{
+    padding: 6px 15px ;
+    border-radius: 15px;
+}
+header ul li a:hover, .active{
+    background: white;
+    color:rgb(85, 0, 98) ;
+    
+
+}
+
+.main{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.main img{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+#moon{
+    mix-blend-mode: screen;
+    transform: translateY(80px); 
+}
+.yassine{
+    color: white;
+    font-size: 25px;
+    text-transform: uppercase;
+    transform: translateY(-140px);
+}
+.content{
+    color: white;
+    padding: 30px;
+}
+.content h2{
+    margin:20px ;
+    font-size: 30px;
+}
+.content p{
+    margin : 20px;
+}
+.main::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to top,rgb(51, 0, 58),transparent);
+}
