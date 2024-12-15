@@ -1,0 +1,17 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-image:url(images/bodybg.webp);
+    background-size: cover;
+}
+
+#board{
+    background-image: url(images/flappybirdbg.png);
+    border: 7px black double;
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    box-shadow: 10px 15px 50px;
+}

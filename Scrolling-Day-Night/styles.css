@@ -7,7 +7,7 @@ body{
     background: linear-gradient(rgb(51, 0, 58), rgb(11, 0, 15));
     height: 100vh;
     font-family: system-ui;
-    transition: background 0.3s,color 0.3s;
+    transition: background 0.3s ease;
 }
 a{
     text-decoration: none;
