@@ -6,12 +6,15 @@ const resetBtn = document.getElementById('resetBtn');
 const stopBtn = document.getElementById('stopBtn');
 const start = document.querySelector('.start');
 
+
+let audio = new Audio("./sounds/telephone-ring-129620.mp3")
 function stopwatch(){
     seconds++;
     if(seconds== 60){
         seconds=0;
         minutes++;
         if(minutes== 60){
+            audio.play();
             minutes=0;
             hours++;
         }
@@ -27,6 +30,7 @@ function stopwatch(){
 function watchStart(){
     console.log(timer);
     if(timer!==null){
+        audio.pause();
         clearInterval(timer);
         timer = null;
         start.src = "images/start.png";
@@ -38,12 +42,16 @@ function watchStart(){
     timer = setInterval(stopwatch,1000);
 }
 function watchStop(){
+    audio.pause();
+
     clearInterval(timer);
     console.log(timer);
     timer = null;
     start.src = "images/start.png";
 }
 function watchReset(){
+    audio.pause();
+
     clearInterval(timer);
     [seconds,minutes,hours] = [0,0,0];
     displayTime.innerHTML = "00:00:00";
